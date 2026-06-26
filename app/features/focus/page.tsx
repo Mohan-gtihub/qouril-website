@@ -7,7 +7,7 @@ import {
   Eyebrow,
 } from "@/components/ui";
 import Reveal from "@/components/Reveal";
-import { Ring } from "@/components/Charts";
+import { Ring, FOCUS } from "@/components/Charts";
 import FocusPill from "@/components/FocusPill";
 import {
   IconClock,
@@ -56,7 +56,7 @@ export default function FocusPage() {
   return (
     <main className="bg-paper">
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="pt-[130px] pb-20">
+      <section className="pt-[110px] pb-14 sm:pt-[130px] sm:pb-20">
         <Container>
           <Reveal className="mx-auto flex max-w-[800px] flex-col items-center text-center">
             <div className="mb-5">
@@ -82,7 +82,7 @@ export default function FocusPage() {
       </section>
 
       {/* ── Three surfaces ───────────────────────────────── */}
-      <section className="pb-24">
+      <section className="pb-16 sm:pb-24">
         <Container>
           <SectionHead
             eyebrow="One engine, three surfaces"
@@ -110,7 +110,7 @@ export default function FocusPage() {
                   confetti.
                 </p>
                 <div className="mt-7 grid place-items-center rounded-card border border-line bg-sunken py-7">
-                  <Ring pct={0.65} value="17:23" label="remaining" />
+                  <Ring pct={0.65} value="17:23" label="remaining" color={FOCUS} />
                 </div>
               </Tile>
             </Reveal>
@@ -190,7 +190,7 @@ export default function FocusPage() {
       </section>
 
       {/* ── Pomodoro ─────────────────────────────────────── */}
-      <section className="pb-24">
+      <section className="pb-16 sm:pb-24">
         <Container>
           <SectionHead
             eyebrow="Rhythm"
@@ -247,7 +247,7 @@ export default function FocusPage() {
                     POMODORO · 3 / 4
                   </span>
                   <div className="mt-6 grid place-items-center">
-                    <Ring pct={0.42} value="10:32" label="work block" />
+                    <Ring pct={0.42} value="10:32" label="work block" color={FOCUS} />
                   </div>
                   <div className="mt-6 flex items-center justify-center gap-3">
                     <button className="grid h-9 w-9 place-items-center rounded-full bg-ink text-paper">
@@ -265,7 +265,7 @@ export default function FocusPage() {
       </section>
 
       {/* ── Session types ────────────────────────────────── */}
-      <section className="pb-24">
+      <section className="pb-16 sm:pb-24">
         <Container>
           <SectionHead
             eyebrow="Session types"
@@ -291,7 +291,7 @@ export default function FocusPage() {
       </section>
 
       {/* ── Alerts ───────────────────────────────────────── */}
-      <section className="pb-24">
+      <section className="pb-16 sm:pb-24">
         <Container>
           <SectionHead
             eyebrow="Alerts"
