@@ -2,6 +2,7 @@ import {
   Container,
   Tile,
   TileIcon,
+  ACCENTS,
   Button,
   Stat,
   Eyebrow,
@@ -12,7 +13,7 @@ import { IconGlobe, IconLayers, IconChart, IconCheck } from "@/components/icons"
 export const metadata = {
   title: "About — Quoril",
   description:
-    "Quoril is a native command center for deep work — built by Mohan Kilari for people who ship. Local-first, private, and focused.",
+    "Quoril is a native command center for deep work — built by Erik Vake for people who ship. Local-first, private, and focused.",
 };
 
 const PRINCIPLES = [
@@ -116,7 +117,7 @@ export default function AboutPage() {
             {PRINCIPLES.map((p, i) => (
               <Reveal key={p.title} style={{ transitionDelay: `${i * 80}ms` }}>
                 <Tile className="h-full">
-                  <TileIcon>{p.icon}</TileIcon>
+                  <TileIcon tint={ACCENTS[i % ACCENTS.length]}>{p.icon}</TileIcon>
                   <h3 className="text-[20px] font-semibold tracking-[-0.01em] text-ink">
                     {p.title}
                   </h3>

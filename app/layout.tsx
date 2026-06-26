@@ -3,6 +3,8 @@ import { cookies } from "next/headers";
 import { Inter, Poppins, Indie_Flower } from "next/font/google";
 import "./globals.css";
 import SiteChrome from "@/components/SiteChrome";
+import AnnouncementBar from "@/components/AnnouncementBar";
+import CookieConsent from "@/components/CookieConsent";
 
 // Type system mirrors donethat.ai: Inter for body/UI (variable 100–900),
 // Poppins for headings (400 / 600), Indie Flower for handwritten accents.
@@ -76,7 +78,9 @@ export default function RootLayout({
       className={`${inter.variable} ${poppins.variable} ${indie.variable}`}
     >
       <body className="font-sans antialiased">
+        <AnnouncementBar />
         <SiteChrome isAdmin={isAdmin}>{children}</SiteChrome>
+        <CookieConsent />
       </body>
     </html>
   );
