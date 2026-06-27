@@ -25,7 +25,7 @@ const COLS: [string, [string, string][]][] = [
     "Company",
     [
       ["About", "/about"],
-      ["Contact", "mailto:hello@quoril.app"],
+      ["Contact", "mailto:hello@quoril.in"],
     ],
   ],
   [
@@ -50,7 +50,7 @@ export default function Footer() {
             focus, analytics and digital wellbeing in one native app.
           </p>
           <p className="mt-4 text-[13px] text-ink-faint">
-            Built by Erik Vake.
+            Built by Erik Vale.
           </p>
         </div>
 
